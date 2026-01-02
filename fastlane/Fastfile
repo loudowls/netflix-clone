@@ -15,18 +15,23 @@
 # Fastfile
 # Fastfile
 
+# Fastfile - Final clean version
 default_platform(:ios)
 
 platform :ios do
   desc "Upload build to TestFlight"
   lane :beta do
-    # Build without incrementing (manage version manually in Xcode)
+    # Clear any cached data
+    clear_derived_data
+    
+    # Build
     build_app(
       scheme: "netflix-clone-github",
       export_method: "app-store",
       clean: true
     )
     
+    # Upload
     upload_to_testflight(
       skip_waiting_for_build_processing: true
     )

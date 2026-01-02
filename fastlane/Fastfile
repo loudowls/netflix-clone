@@ -19,7 +19,7 @@ platform :ios do
   desc "Upload build to TestFlight"
   lane :beta do
     build_app(
-      scheme: "YourSchemeName",
+      scheme: "netflix-clone-github",
       export_method: "app-store"
     )
 
@@ -34,7 +34,7 @@ platform :ios do
   desc "Release to App Store"
   lane :release do
     build_app(
-      scheme: "YourSchemeName",
+      scheme: "netflix-clone-github",
       export_method: "app-store"
     )
 

@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		06BC00C92F07824300352100 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = 06BC00C82F07824300352100 /* ToastUI */; };
+		06BC00D32F0788CF00352100 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 06BC00D22F0788CF00352100 /* SwiftUINavigation */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		06BC00952F0764A400352100 /* netflix-clone-github.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "netflix-clone-github.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06BC00D32F0788CF00352100 /* SwiftUINavigation in Frameworks */,
+				06BC00C92F07824300352100 /* ToastUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = "netflix-clone-github";
 			packageProductDependencies = (
+				06BC00C82F07824300352100 /* ToastUI */,
+				06BC00D22F0788CF00352100 /* SwiftUINavigation */,
 			);
 			productName = "netflix-clone-github";
 			productReference = 06BC00952F0764A400352100 /* netflix-clone-github.app */;
@@ -94,6 +103,10 @@
 			);
 			mainGroup = 06BC008C2F0764A400352100;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				06BC00C72F07824300352100 /* XCRemoteSwiftPackageReference "toastUI" */,
+				06BC00D12F0788CF00352100 /* XCRemoteSwiftPackageReference "SwiftUINavigation" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 06BC00962F0764A400352100 /* Products */;
 			projectDirPath = "";
@@ -266,7 +279,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "aap.loudowls.netflix-clone-github";
+				PRODUCT_BUNDLE_IDENTIFIER = "aap.loudowls.netflix-education";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -298,7 +311,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "aap.loudowls.netflix-clone-github";
+				PRODUCT_BUNDLE_IDENTIFIER = "aap.loudowls.netflix-education";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -332,6 +345,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		06BC00C72F07824300352100 /* XCRemoteSwiftPackageReference "toastUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/debuging-life/toastUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		06BC00D12F0788CF00352100 /* XCRemoteSwiftPackageReference "SwiftUINavigation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/debuging-life/SwiftUINavigation";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		06BC00C82F07824300352100 /* ToastUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06BC00C72F07824300352100 /* XCRemoteSwiftPackageReference "toastUI" */;
+			productName = ToastUI;
+		};
+		06BC00D22F0788CF00352100 /* SwiftUINavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06BC00D12F0788CF00352100 /* XCRemoteSwiftPackageReference "SwiftUINavigation" */;
+			productName = SwiftUINavigation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 06BC008D2F0764A400352100 /* Project object */;
 }

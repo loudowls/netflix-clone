@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import ToastUI
 
 @main
 struct netflix_clone_githubApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .setupToastUI()
         }
     }
 }

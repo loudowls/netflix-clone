@@ -12,43 +12,88 @@
 
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
+# Fastfile
 
 default_platform(:ios)
-platform :ios do
 
+platform :ios do
   desc "Upload build to TestFlight"
   lane :beta do
-    build_app(
-      scheme: "netflix-clone-github",
-      export_method: "app-store"
+    # Ensure we're using the right certificates
+    setup_ci if ENV['CI']
+    
+    # Get or create certificates and provisioning profiles
+    # Uncomment if using match (recommended)
+    # match(
+    #   type: "appstore",
+    #   readonly: is_ci
+    # )
+    
+    # Increment build number
+    increment_build_number(
+      xcodeproj: "netflix-clone-github.xcodeproj"  # Update with your actual .xcodeproj name
     )
-
+    
+    # Build the app
+    build_app(
+      workspace: "netflix-clone-github.xcworkspace",  # Use if you have CocoaPods/SPM
+      # OR use project if no workspace:
+      # project: "netflix-clone.xcodeproj",
+      scheme: "netflix-clone-github",
+      export_method: "app-store",
+      clean: true,
+      configuration: "Release",
+      output_directory: "./build",
+      output_name: "netflix-clone.ipa",
+      # Allow Xcode to manage signing
+      export_options: {
+        method: "app-store",
+        uploadBitcode: false,
+        uploadSymbols: true,
+        compileBitcode: false
+      }
+    )
+    
+    # Upload to TestFlight
     upload_to_testflight(
       beta_app_description: "Beta build",
-      beta_app_feedback_email: "you@email.com",
+      beta_app_feedback_email: "loudowls05@gmail.com",
       submit_for_beta_review: true,
-      skip_waiting_for_build_processing: true
+      skip_waiting_for_build_processing: true,
+      distribute_external: false,
+      changelog: "Bug fixes and improvements"
     )
   end
-
+  
   desc "Release to App Store"
   lane :release do
-    build_app(
-      scheme: "netflix-clone-github",
-      export_method: "app-store"
+    # Increment build number
+    increment_build_number(
+      xcodeproj: "netflix-clone.xcodeproj"
     )
-
+    
+    # Build
+    build_app(
+      workspace: "netflix-clone.xcworkspace",
+      scheme: "netflix-clone-github",
+      export_method: "app-store",
+      clean: true,
+      configuration: "Release"
+    )
+    
+    # Upload to App Store
     upload_to_app_store(
       submit_for_review: false,
-      automatic_release: false
+      automatic_release: false,
+      force: true,
+      skip_metadata: true,
+      skip_screenshots: true
     )
   end
+  
+  # Error handling
+  error do |lane, exception|
+    puts "\n❌ Error in lane '#{lane}': #{exception.message}\n"
+    puts exception.backtrace.join("\n")
+  end
 end
-# platform :ios do
-#   desc "Push a new release build to the App Store"
-#   lane :release do
-#     increment_build_number(xcodeproj: "netflix-clone-github.xcodeproj")
-#     build_app(scheme: "netflix-clone-github")
-#     upload_to_app_store
-#   end
-# end

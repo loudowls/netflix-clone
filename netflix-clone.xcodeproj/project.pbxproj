@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		06962E172EFB9A9900DD4534 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 06962E162EFB9A9900DD4534 /* SwiftUINavigation */; };
+		06962E1D2EFB9B5300DD4534 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 06962E1C2EFB9B5300DD4534 /* Auth */; };
+		06962E1F2EFB9B5300DD4534 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 06962E1E2EFB9B5300DD4534 /* Storage */; };
+		06962E212EFB9B5300DD4534 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 06962E202EFB9B5300DD4534 /* Supabase */; };
+		06962EE92F02191700DD4534 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = 06962EE82F02191700DD4534 /* ToastUI */; };
+		06962FA72F04501300DD4534 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 06962FA62F04501300DD4534 /* Kingfisher */; };
+		06BC006B2F058B7200352100 /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = 06BC006A2F058B7200352100 /* YouTubePlayerKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		06962E012EFB73B300DD4534 /* netflix-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "netflix-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +33,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06BC006B2F058B7200352100 /* YouTubePlayerKit in Frameworks */,
+				06962FA72F04501300DD4534 /* Kingfisher in Frameworks */,
+				06962E212EFB9B5300DD4534 /* Supabase in Frameworks */,
+				06962E1F2EFB9B5300DD4534 /* Storage in Frameworks */,
+				06962E172EFB9A9900DD4534 /* SwiftUINavigation in Frameworks */,
+				06962EE92F02191700DD4534 /* ToastUI in Frameworks */,
+				06962E1D2EFB9B5300DD4534 /* Auth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +82,13 @@
 			);
 			name = "netflix-clone";
 			packageProductDependencies = (
+				06962E162EFB9A9900DD4534 /* SwiftUINavigation */,
+				06962E1C2EFB9B5300DD4534 /* Auth */,
+				06962E1E2EFB9B5300DD4534 /* Storage */,
+				06962E202EFB9B5300DD4534 /* Supabase */,
+				06962EE82F02191700DD4534 /* ToastUI */,
+				06962FA62F04501300DD4534 /* Kingfisher */,
+				06BC006A2F058B7200352100 /* YouTubePlayerKit */,
 			);
 			productName = "netflix-clone";
 			productReference = 06962E012EFB73B300DD4534 /* netflix-clone.app */;
@@ -94,6 +118,13 @@
 			);
 			mainGroup = 06962DF82EFB73B300DD4534;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				06962E152EFB9A9900DD4534 /* XCRemoteSwiftPackageReference "SwiftUINavigation" */,
+				06962E1B2EFB9B5300DD4534 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				06962EE72F02191700DD4534 /* XCRemoteSwiftPackageReference "toastUI" */,
+				06962FA52F04501300DD4534 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				06BC00692F058B7200352100 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 06962E022EFB73B300DD4534 /* Products */;
 			projectDirPath = "";
@@ -256,6 +287,7 @@
 				DEVELOPMENT_TEAM = 3J794WYXTZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need to access photo library for profile image";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -273,7 +305,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -288,6 +320,7 @@
 				DEVELOPMENT_TEAM = 3J794WYXTZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need to access photo library for profile image";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,7 +338,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -332,6 +365,87 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		06962E152EFB9A9900DD4534 /* XCRemoteSwiftPackageReference "SwiftUINavigation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/debuging-life/SwiftUINavigation";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		06962E1B2EFB9B5300DD4534 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+		06962EE72F02191700DD4534 /* XCRemoteSwiftPackageReference "toastUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/debuging-life/toastUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		06962FA52F04501300DD4534 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.2;
+			};
+		};
+		06BC00692F058B7200352100 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		06962E162EFB9A9900DD4534 /* SwiftUINavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06962E152EFB9A9900DD4534 /* XCRemoteSwiftPackageReference "SwiftUINavigation" */;
+			productName = SwiftUINavigation;
+		};
+		06962E1C2EFB9B5300DD4534 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06962E1B2EFB9B5300DD4534 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		06962E1E2EFB9B5300DD4534 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06962E1B2EFB9B5300DD4534 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		06962E202EFB9B5300DD4534 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06962E1B2EFB9B5300DD4534 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		06962EE82F02191700DD4534 /* ToastUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06962EE72F02191700DD4534 /* XCRemoteSwiftPackageReference "toastUI" */;
+			productName = ToastUI;
+		};
+		06962FA62F04501300DD4534 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06962FA52F04501300DD4534 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		06BC006A2F058B7200352100 /* YouTubePlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06BC00692F058B7200352100 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
+			productName = YouTubePlayerKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 06962DF92EFB73B300DD4534 /* Project object */;
 }
